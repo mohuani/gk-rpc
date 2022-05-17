@@ -8,6 +8,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="gk-rpc-server" />
+        <module name="gk-rpc-client" />
       </profile>
       <profile name="Annotation profile for gk-rpc" enabled="true">
         <sourceOutputDir name="../../target/generated-sources/annotations" />
@@ -15,7 +16,6 @@
         <outputRelativeToContentRoot value="true" />
         <module name="gk-rpc-common" />
         <module name="gk-rpc-transport" />
-        <module name="gk-rpc-client" />
         <module name="gk-rpc-codec" />
         <module name="gk-rpc-proto" />
       </profile>
