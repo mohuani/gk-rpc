@@ -66,6 +66,7 @@ public class HttpTransportServer implements TransportServer {
                 handler.onRequest(in, out);
             }
 
+            out.flush();
         }
     }
 
