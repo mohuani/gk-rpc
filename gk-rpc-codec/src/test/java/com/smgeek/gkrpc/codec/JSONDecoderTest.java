@@ -4,17 +4,20 @@ import org.junit.Test;
 
 import static org.junit.Assert.*;
 
-public class JSONEncoderTest {
+public class JSONDecoderTest {
 
     @Test
-    public void encode() {
+    public void decode() {
         Encoder encoder = new JSONEncoder();
         TestBean bean = new TestBean();
-
         bean.setName("mohuani");
         bean.setAge(18);
-
         byte[] bytes = encoder.encode(bean);
-        assertNotNull(bytes);
+
+        Decoder decoder = new JSONDecoder();
+
+        TestBean bean2 = decoder.decode(bytes, TestBean.class);
+        assertEquals(bean.getAge(), bean2.getAge());
+        assertEquals(bean.getName(), bean2.getName());
     }
 }
