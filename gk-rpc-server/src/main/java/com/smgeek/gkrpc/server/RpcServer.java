@@ -30,7 +30,9 @@ public class RpcServer {
 
     public RpcServer (RpcServerConfig config) {
         this.config = config;
+
         this.net = ReflectionUtils.newInstance(config.getTransportClass());
+        this.net.init(config.getPort(), this.handler);
 
         this.encoder = ReflectionUtils.newInstance(config.getEncoderClass());
         this.decoder = ReflectionUtils.newInstance(config.getDecoderClass());

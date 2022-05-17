@@ -21,6 +21,6 @@ public class RpcClientConfig {
     private Class<? extends TransportSelector> selectorClass = RandomTransportSelector.class;
     private int connectCount = 1;
     private List<Peer> servers = Arrays.asList(
-            new Peer("127.0.0.1", 3000)
+            new Peer("127.0.0.1", 3010)
     );
 }
